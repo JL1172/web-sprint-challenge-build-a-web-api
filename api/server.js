@@ -1,7 +1,7 @@
 const express = require('express');
 
 //pull in routes
-
+const ProjectRoute = require("./projects/projects-router");
 //pull in routes
 
 
@@ -19,7 +19,7 @@ server.use(express.json());
 
 
 //server use routes
-
+server.use("/api/projects", ProjectRoute)
 //server use routes
 
 module.exports = server;
