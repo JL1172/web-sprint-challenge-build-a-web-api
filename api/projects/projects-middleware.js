@@ -15,5 +15,25 @@ module.exports = {
         } catch (err) {   
             next(err)
         }
+    },
+    async validatePost(req,res,next) {
+        try {
+            const {name,description} = req.body;
+            if (!name || !description) {
+                next({status : 400})
+            } else {
+                next(); 
+            }
+        } catch (err) {next(err)}
+    },
+    async validatePut(req,res,next) {
+        try {
+            const {name,description,completed} = req.body;
+            if (!name || !description || completed === undefined) {
+                next({status : 400})
+            } else {
+                next(); 
+            }
+        } catch (err) {next(err)}
     }
 }
