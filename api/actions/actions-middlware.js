@@ -28,5 +28,15 @@ module.exports = {
                 next(); 
             }
         } catch (err) { next(err) }
+    },
+    async validatePut(req, res, next) {
+        try {
+            const {description,notes,completed} = req.body;
+            if (!description || !notes || !completed) {
+                next({status : 400, message : "need description, completed, and notes"})
+            } else {
+                next(); 
+            }
+        } catch (err) { next(err) }
     }
 }
