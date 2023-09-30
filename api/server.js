@@ -1,9 +1,25 @@
 const express = require('express');
-const server = express();
 
-// Configure your server here
-// Build your actions router in /api/actions/actions-router.js
-// Build your projects router in /api/projects/projects-router.js
-// Do NOT `server.listen()` inside this file!
+//pull in routes
+
+//pull in routes
+
+
+
+//instantiating server
+const server = express();
+//instantiating server
+
+
+
+//global middleware
+server.use(express.json()); 
+//global middleware
+
+
+
+//server use routes
+
+//server use routes
 
 module.exports = server;
