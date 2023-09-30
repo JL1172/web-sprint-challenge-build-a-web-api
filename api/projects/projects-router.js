@@ -15,7 +15,7 @@ router.get("/", async (req, res, next) => {
 //get
 //getbyid
 router.get("/:id", validateProjectId, async (req, res, next) => {
-    res.status(200).json(req.user);
+    res.status(200).json(req.proj);
 })
 //getbyid
 //post

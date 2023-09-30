@@ -2,6 +2,7 @@ const express = require('express');
 
 //pull in routes
 const ProjectRoute = require("./projects/projects-router");
+const ActionRoute = require("./actions/actions-router");
 //pull in routes
 
 
@@ -20,6 +21,7 @@ server.use(express.json());
 
 //server use routes
 server.use("/api/projects", ProjectRoute)
+server.use("/api/actions",ActionRoute)
 //server use routes
 
 module.exports = server;

@@ -9,7 +9,7 @@ module.exports = {
             if (!validId) {
                 next({status : 404, message : `no project with id ${id} exists`})
             } else {
-                req.user = validId; 
+                req.proj = validId; 
                 next();
             }
         } catch (err) {   
